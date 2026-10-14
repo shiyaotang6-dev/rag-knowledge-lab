@@ -1,0 +1,12 @@
+[
+  {"question":"申请年假要怎么做？","expected_source":"leave_policy.md"},
+  {"question":"差旅报销要在什么时候提交，需要哪些材料？","expected_source":"expense_policy.md"},
+  {"question":"新员工入职第一天需要做什么？","expected_source":"onboarding.md"},
+  {"question":"设备故障如何联系 IT？","expected_source":"it_support.md"},
+  {"question":"如何预订会议室？","expected_source":"meeting_rooms.md"},
+  {"question":"向外部服务提供资料前应检查什么？","expected_source":"data_handling.md"},
+  {"question":"采购办公用品的审批步骤是什么？","expected_source":"reimbursement.md"},
+  {"question":"发现设备丢失后应该怎么办？","expected_source":"security_incident.md"},
+  {"question":"今年公司的净利润和年度营收是多少？","expected_source":null},
+  {"question":"松桥实验室的 CEO 是谁？","expected_source":null}
+]
