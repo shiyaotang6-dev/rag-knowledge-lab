@@ -1,5 +1,7 @@
 # RAG Knowledge Lab
 
+[![Tests](https://github.com/shiyaotang6-dev/rag-knowledge-lab/actions/workflows/test.yml/badge.svg)](https://github.com/shiyaotang6-dev/rag-knowledge-lab/actions/workflows/test.yml)
+
 一个可独立运行的 RAG（检索增强生成）个人复现项目：从一组虚构的内部知识库文档出发，用混合检索找到证据，展示来源引用，并在证据不足时拒绝编造答案。项目用于展示工程思路与可复现实验，**不是任何公司的内部代码、生产系统或原实习项目源码**。
 
 ![离线问答演示的实际截图](docs/demo.jpg)
@@ -49,6 +51,8 @@ python -m uvicorn rag_lab.api:app
 ## 评测口径
 
 `eval` 使用仓库内的 8 条可回答与 2 条不可回答合成问题，报告 Hit@K、MRR、拒答准确率和检索耗时。耗时只覆盖已建索引后的本地 retrieval，**不包含索引构建、模型下载、远程 API 请求或答案生成**。评测指标是本机运行结果，不代表线上吞吐或生产质量。
+
+一次实际执行的完整结果与依赖版本保存在 [example_eval.json](docs/example_eval.json)。这 10 条问题是小型软件测试夹具，不能用于证明未见问题上的泛化能力；神经模型和远程生成没有在本示例结果中启用。
 
 ## 检索与证据流程
 

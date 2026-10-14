@@ -1,0 +1,158 @@
+{
+  "dataset": "src/rag_lab/data/eval.json",
+  "cases": 10,
+  "answerable_cases": 8,
+  "top_k": 3,
+  "embedding": "TF-IDF cosine",
+  "reranker": "sentence-coverage reranker",
+  "hit_at_k": 1.0,
+  "mrr_at_k": 1.0,
+  "abstention_accuracy": 1.0,
+  "retrieval_mean_ms": 0.839,
+  "retrieval_p95_ms": 1.217,
+  "scope": "Synthetic fixture retrieval only; excludes indexing, model download and API generation.",
+  "results": [
+    {
+      "question": "申请年假要怎么做？",
+      "expected_source": "leave_policy.md",
+      "sources": [
+        "leave_policy.md",
+        "reimbursement.md",
+        "onboarding.md"
+      ],
+      "supported": true,
+      "hit_at_k": true,
+      "reciprocal_rank": 1.0,
+      "abstention_correct": true,
+      "retrieval_ms": 1.363
+    },
+    {
+      "question": "差旅报销要在什么时候提交，需要哪些材料？",
+      "expected_source": "expense_policy.md",
+      "sources": [
+        "expense_policy.md",
+        "meeting_rooms.md",
+        "leave_policy.md"
+      ],
+      "supported": true,
+      "hit_at_k": true,
+      "reciprocal_rank": 1.0,
+      "abstention_correct": true,
+      "retrieval_ms": 0.974
+    },
+    {
+      "question": "新员工入职第一天需要做什么？",
+      "expected_source": "onboarding.md",
+      "sources": [
+        "onboarding.md",
+        "leave_policy.md",
+        "meeting_rooms.md"
+      ],
+      "supported": true,
+      "hit_at_k": true,
+      "reciprocal_rank": 1.0,
+      "abstention_correct": true,
+      "retrieval_ms": 0.789
+    },
+    {
+      "question": "设备故障如何联系 IT？",
+      "expected_source": "it_support.md",
+      "sources": [
+        "it_support.md",
+        "security_incident.md",
+        "meeting_rooms.md"
+      ],
+      "supported": true,
+      "hit_at_k": true,
+      "reciprocal_rank": 1.0,
+      "abstention_correct": true,
+      "retrieval_ms": 0.725
+    },
+    {
+      "question": "如何预订会议室？",
+      "expected_source": "meeting_rooms.md",
+      "sources": [
+        "meeting_rooms.md"
+      ],
+      "supported": true,
+      "hit_at_k": true,
+      "reciprocal_rank": 1.0,
+      "abstention_correct": true,
+      "retrieval_ms": 0.514
+    },
+    {
+      "question": "向外部服务提供资料前应检查什么？",
+      "expected_source": "data_handling.md",
+      "sources": [
+        "data_handling.md",
+        "security_incident.md",
+        "it_support.md"
+      ],
+      "supported": true,
+      "hit_at_k": true,
+      "reciprocal_rank": 1.0,
+      "abstention_correct": true,
+      "retrieval_ms": 0.816
+    },
+    {
+      "question": "采购办公用品的审批步骤是什么？",
+      "expected_source": "reimbursement.md",
+      "sources": [
+        "reimbursement.md",
+        "it_support.md",
+        "onboarding.md"
+      ],
+      "supported": true,
+      "hit_at_k": true,
+      "reciprocal_rank": 1.0,
+      "abstention_correct": true,
+      "retrieval_ms": 1.039
+    },
+    {
+      "question": "发现设备丢失后应该怎么办？",
+      "expected_source": "security_incident.md",
+      "sources": [
+        "security_incident.md",
+        "onboarding.md",
+        "it_support.md"
+      ],
+      "supported": true,
+      "hit_at_k": true,
+      "reciprocal_rank": 1.0,
+      "abstention_correct": true,
+      "retrieval_ms": 0.822
+    },
+    {
+      "question": "今年公司的净利润和年度营收是多少？",
+      "expected_source": null,
+      "sources": [
+        "onboarding.md",
+        "leave_policy.md"
+      ],
+      "supported": false,
+      "hit_at_k": false,
+      "reciprocal_rank": 0.0,
+      "abstention_correct": true,
+      "retrieval_ms": 0.637
+    },
+    {
+      "question": "松桥实验室的 CEO 是谁？",
+      "expected_source": null,
+      "sources": [
+        "leave_policy.md",
+        "meeting_rooms.md",
+        "onboarding.md"
+      ],
+      "supported": false,
+      "hit_at_k": false,
+      "reciprocal_rank": 0.0,
+      "abstention_correct": true,
+      "retrieval_ms": 0.711
+    }
+  ],
+  "environment": {
+    "python": "3.13.2",
+    "scikit_learn": "1.9.0",
+    "numpy": "2.3.1"
+  }
+}
